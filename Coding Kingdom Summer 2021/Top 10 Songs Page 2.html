@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <link rel="stylesheet" href="style.css">
+
+            <title>
+                Top 10 songs that you should listen to! 
+            </title>
+            <style>
+                p{
+                        font-size:60px;
+                        background-color: rgb(0, 0, 0);
+                        color:cyan;
+                        text-align:center;
+                        
+                        
+                    }
+                
+                .Song{
+                    margin: 30px 0px 30px 0px;
+                    font-size:40px;
+                    text-decoration: underline;
+                    text-align:left;
+                    width:100%;
+                }
+                .Description{
+                    font-size: 25px;
+                    text-align:center;
+                    width:65%;
+                }
+    
+                
+                .big{
+                    display:flex;
+                    flex-direction:row;
+                    flex-wrap:wrap;
+                }
+                .flex{
+                    display:flex;
+                    margin: 50px 0px 50px 0px;
+                    flex-direction:row;
+                    flex-wrap:wrap;
+                }
+                
+                img{
+                    width:35%;
+                }
+                ul{
+                    position:relative;
+                    align-content: center;
+                    bottom:0px;
+                    width:20%;
+                    z-index:1;
+                }
+                
+                
+            </style>
+            
+        </head>
+        <body>
+            <audio id="one"><source src="Music/24kGoldn-Mood-Official-Audio-ft.-Iann-Dior.mp3"type="audio/mp3"></audio>
+            <audio id="two"><source src="Music/Marshmello X Jonas Brothers - Leave Before You Love Me.mp3"type="audio/mp3"></audio>
+            <audio id="three"><source src="Music/Wrecked _ 24Naijamuzic.com.mp3"type="audio/mp3"></audio>
+            <audio id="four"><source src="Music/BTS-Butter.mp3"type="audio/mp3"></audio>
+            <audio id="five"><source src="Music/The-Weeknd-–-Save-your-Tears-Remix-ft.-Ariana-Grande-.mp3"type="audio/mp3"></audio>
+            <audio id="six"><source src="Music/Breathe.mp3"type="audio/mp3"></audio>
+            <audio id="seven"><source src="Music/Breathe.mp3"type="audio/mp3"></audio>
+            <audio id="eight"><source src="Music/Breathe.mp3"type="audio/mp3"></audio>
+            <audio id="nine"><source src="Music/Breathe.mp3"type="audio/mp3"></audio>
+            <audio id="zero"><source src="Music/Breathe.mp3"type="audio/mp3"></audio>
+            <p>
+                Top 10 Songs That You Must Listen To!
+            </p>
+            <div class="big">
+            <div class="flex">
+            <div class="Song">
+                3. Wrecked (By Imagine Dragons)
+            </div>
+            
+            <img onclick="W()" src="https://geniuslyrics.net/i/bands/350/imagine-dragons-mercury-act-1.jpg" alt="Wrecked, By Imgaine Dragons!!!">
+
+            <div class="Description">
+                "Wrecked" was the 27th song that Imagine Dragons released at the begginging of July 2021.
+                <br/><br/><br/>This production is a sorrow memory for Imagine Dragon's sister who died with cancer a year ago.
+                <br/><br/> This is the most touching/heart-breaking song that Imagine Dragons ever released.
+                <br/><br/> This is the 3rd song in the Album: Mercury--Act 1
+                <br/><br/>The 2 other songs are "Follow You" and "Cutthroat", which are also amazing releases.
+                <br/><br/><br/> Mercury---Act 1 (Imagine Dragons):
+                <br/><br/><br/><a href="https://www.youtube.com/watch?v=k3zimSRKqNw"onclick="EnjoyMusic()">1. Follow you</a>
+                <br/><br/><a href="https://www.youtube.com/watch?v=I3byJis039I"onclick="EnjoyMusic()">2. Cutthroat</a>
+                <br/><br/><a href="https://www.youtube.com/watch?v=Y2NkuFIlLEo"onclick="EnjoyMusic()">3. Wrecked</a>
+                
+            </div>
+        </div>
+            <div class="flex">
+            <div class="Song">
+                4. Butter (By BTS)
+            </div>
+            
+            <img onclick="B()" src="BTS-24.jpg" alt="Butter, By BTS!!!">
+
+            <div class="Description">
+                "Butter" is the 9th English Song that BTS released on May 21,2021. 
+                <br/><br/><br/>Some Rankings/achievements for this song:
+                <br/><br/>***This song achieved 257 Perfect All-Kill (PAK) on Korean charts
+                <br/><br/>***The song also debuted and charted for five weeks at #1 on Billboard Hot 100
+                <br/><br/>***This song is BTS's thrid #1 on Billboard Hot 100
+                <br/><br/><a href="https://bts.fandom.com/wiki/Butter">Source</a>
+                <br/><br/><br/><a href="https://www.youtube.com/watch?v=WMweEpGlu_U"onclick="EnjoyMusic()">*****Original Version*****</a>
+                <br/><br/><a href="https://www.youtube.com/watch?v=YLXfyHsfFz0"onclick="EnjoyMusic()">Hotter Remix🥵</a>
+                <br/><br/><a href="https://www.youtube.com/watch?v=ilqQJrbXghQ"onclick="EnjoyMusic()">Cooler Remix🥶</a>
+                <br/><br/><a href="https://www.youtube.com/watch?v=vIESwwXYi2c"onclick="EnjoyMusic()">Sweeter Remix🤩</a>
+                
+
+
+
+            </div>
+        </div>
+            <ul>
+                <li><a href="#"><</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">></a></li> 
+            </ul>
+        </div>
+            
+            </div>
+            <script>
+                const one=document.getElementById("one");
+                const two=document.getElementById('two');
+                const three=document.getElementById('three');
+                const four=document.getElementById('four');
+                const five=document.getElementById('five');
+
+                document.addEventListener('keypress',function(event){
+                    const keyName= event.key;
+                    switch(keyName){
+                        case('1'):
+                            one.currentTime=0;
+                            one.play();
+                            break;
+                        case('2'):
+                            two.currentTime=0;
+                            two.play();
+                            break;
+                        case('3'):
+                            three.currentTime=0;
+                            three.play();
+                            break;
+                        case('4'):
+                            four.currentTime=0;
+                            four.play();
+                            break;
+                        case('5'):
+                            five.currentTime=0;
+                            five.play();
+                            break;
+                        case('6'):
+                            six.currentTime=0;
+                            six.play();
+                            break;
+                        case('7'):
+                            seven.currentTime=0;
+                            seven.play();
+                            break;
+                        case('8'):
+                            eight.currentTime=0;
+                            eight.play();
+                            break;
+                        case('9'):
+                            nine.currentTime=0;
+                            nine.play();
+                            break;
+                        case('0'):
+                            zero.currentTime=0;
+                            zero.play();
+                            break;
+                        case('s'):
+                            stopAudio();
+                        case('S'):
+                            stopAudio();
+                    }
+                });
+                function stopAudio(){
+                    var sounds=document.getElementsByTagName('audio');
+                    for(i=0;i<sounds.length;i++){
+                        sounds[i].pause();
+                    }
+                }
+                function W(){
+                    window.open("https://letrasbd.com/imagine-dragons/wrecked/");
+                }
+                function B(){
+                    window.open("https://www.soompi.com/article/1472898wpp/bts-drops-teasers-for-2-new-remixes-of-butter-to-celebrate-their-no-1-on-billboards-hot-100");
+            
+                }
+                function EnjoyMusic(){
+                    alert("Hope You enjoy the song!");
+                }
+            
+            </script>
+        </body>
+
+    </html>
