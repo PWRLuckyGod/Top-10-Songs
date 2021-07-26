@@ -7,32 +7,25 @@ body
 }
 p{
     font-size:60px;
+    font-family: 'Cinzel', serif;
     background-color: rgb(0, 0, 0);
     color:cyan;
     text-align:center;
     
     
 }
-.Mood{
-    font-size: 40px;
-    margin: 30px 0px 30px 0px;
-    text-decoration: underline;
-    text-align:left;
-    width:100%;
-}
-.Mood_description{
-    font-size: 25px;
-    text-align:left;
-    width:70%;
-}
-.Butter{
+
+
+.Song{
 margin: 30px 0px 30px 0px;
 font-size:40px;
 text-decoration: underline;
 text-align:left;
 width:100%;
 }
-.Butter_description{
+
+.Description{
+font-family: 'Caveat', cursive;
 font-size: 25px;
 text-align:center;
 width:70%;

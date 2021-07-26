@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <link rel="stylesheet" href="style.css">
+
+            <title>
+                Top 10 songs that you should listen to! 
+            </title>
+            <style>
+                p{
+                        font-size:60px;
+                        background-color: rgb(0, 0, 0);
+                        color:cyan;
+                        text-align:center;
+                        
+                        
+                    }
+                
+                .Song{
+                    margin: 30px 0px 30px 0px;
+                    font-size:40px;
+                    text-decoration: underline;
+                    text-align:left;
+                    width:100%;
+                }
+                .Description{
+                    font-size: 25px;
+                    text-align:center;
+                    width:65%;
+                }
+    
+                
+                .big{
+                    display:flex;
+                    flex-direction:row;
+                    flex-wrap:wrap;
+                }
+                .flex{
+                    display:flex;
+                    margin: 50px 0px 50px 0px;
+                    flex-direction:row;
+                    flex-wrap:wrap;
+                }
+                
+                img{
+                    width:35%;
+                }
+                ul{
+                    position:relative;
+                    align-content: center;
+                    bottom:0px;
+                    width:20%;
+                    z-index:1;
+                }
+                
+                
+            </style>
+            
+        </head>
+        <body>
+            <audio id="one"><source src="Music/24kGoldn-Mood-Official-Audio-ft.-Iann-Dior.mp3"type="audio/mp3"></audio>
+            <audio id="two"><source src="Music/Marshmello X Jonas Brothers - Leave Before You Love Me.mp3"type="audio/mp3"></audio>
+            <audio id="three"><source src="Music/Wrecked _ 24Naijamuzic.com.mp3"type="audio/mp3"></audio>
+            <audio id="four"><source src="Music/BTS-Butter.mp3"type="audio/mp3"></audio>
+            <audio id="five"><source src="Music/The-Weeknd-–-Save-your-Tears-Remix-ft.-Ariana-Grande-.mp3"type="audio/mp3"></audio>
+            <audio id="six"><source src="Music/Breathe.mp3"type="audio/mp3"></audio>
+            <audio id="seven"><source src="Music/Hold on.mp3"type="audio/mp3"></audio>
+            <audio id="eight"><source src="Music/Fake a Smile.mp3"type="audio/mp3"></audio>
+            <audio id="nine"><source src="Music/Girls like you.mp3"type="audio/mp3"></audio>
+            <audio id="zero"><source src="Music/Astronaut In the Ocean.mp3"type="audio/mp3"></audio>
+            <p>
+                Top 10 Songs That You Must Listen To!
+            </p>
+            <div class="big">
+            <div class="flex">
+            <div class="Song">
+                9. Girls Like You (Maroon 5, Cardi B)
+            </div>
+            
+            <img onclick="GI()" src="https://opradre.com/wp-content/uploads/2019/05/maxresdefault-1.jpg" alt="Girls Like You (By Maroon 5, feat. Cardi B)">
+            
+
+            <div class="Description">
+                 This song released 3 years ago and hit more than 3 Billion views on Youtube!!!!
+                <br/><br/>The song hit 100 Million views on  Youtube!
+                <br/><br/>Though this song was released 5 months ago, it is still one of the top songs yet remembered.
+                <br/><br/>This is probably one of the most spiritual song ever released!
+                <br/><br/><br/><br/><a href="https://www.youtube.com/watch?v=aJOTlE1K90k"onclick="EnjoyMusic()">*****Girls Like You*****</a>
+                <br/><br/><br/> Recommended Maroon 5 songs:
+                <br/><br/> <a href="https://www.youtube.com/watch?v=BSzSn-PRdtI"onclick="EnjoyMusic()"> 1.Beautiful Mistakes (Maroon 5, Mega Thee Stilton)</a>
+                <br/><br/> <a href="https://www.youtube.com/watch?v=SlPhMPnQ58k"onclick="EnjoyMusic()"> 2.Memories (Maroon 5)</a>
+                
+                
+            </div>
+        </div>
+            <div class="flex">
+            <div class="Song">
+                10. Astronaut In the Ocean (By Masked Wolf)
+            </div>
+            
+            <img onclick="BR()" src="https://images.genius.com/d4d3c3d6984b418483b02499b6064a41.1000x993x1.png" alt="Astronaut In The Ocean, By Masked Wolf!!">
+
+            <div class="Description">
+                "Astronaut In The Ocean" is 1 of the most famous tiktok/gaming song ever created in 2020.
+                <br/><br/> This song basically expresses the anxiety and depression the artist is facing.
+                <br/><br/> Now, it is on the billboard 100 for more than 1 year already!
+                <br/><br/><br/> Some Remixes/parody have been created:
+                <br/><br/> <a href="https://www.youtube.com/watch?v=TYAmClJcJc4"onclick="EnjoyMusic()"> Astronaut In the Ocean (Asian Parody) </a>
+                <br/><br/> <a href="https://www.youtube.com/watch?v=5WHaV1w-gbk"onclick="EnjoyMusic()"> Astronaut In the Ocean (Alok Remix) </a>
+                <br/><br/> <a href="https://www.youtube.com/watch?v=DALEwiDArCQ"onclick="EnjoyMusic()"> Astronaut In The Ocean (G-Eazy & DDG Remix) </a>
+                <br/><br/><br/><br/><a href="https://www.youtube.com/watch?v=MEg-oqI9qmw"onclick="EnjoyMusic()">*****Origninal Song*****</a>
+                
+
+
+
+            </div>
+        </div>
+            <ul>
+                <li><a href="#"><</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">></a></li> 
+            </ul>
+        </div>
+            
+            </div>
+            <script>
+                const one=document.getElementById("one");
+                const two=document.getElementById('two');
+                const three=document.getElementById('three');
+                const four=document.getElementById('four');
+                const five=document.getElementById('five');
+
+                document.addEventListener('keypress',function(event){
+                    const keyName= event.key;
+                    switch(keyName){
+                        case('1'):
+                            one.currentTime=0;
+                            one.play();
+                            break;
+                        case('2'):
+                            two.currentTime=0;
+                            two.play();
+                            break;
+                        case('3'):
+                            three.currentTime=0;
+                            three.play();
+                            break;
+                        case('4'):
+                            four.currentTime=0;
+                            four.play();
+                            break;
+                        case('5'):
+                            five.currentTime=0;
+                            five.play();
+                            break;
+                        case('6'):
+                            six.currentTime=0;
+                            six.play();
+                            break;
+                        case('7'):
+                            seven.currentTime=0;
+                            seven.play();
+                            break;
+                        case('8'):
+                            eight.currentTime=0;
+                            eight.play();
+                            break;
+                        case('9'):
+                            nine.currentTime=0;
+                            nine.play();
+                            break;
+                        case('0'):
+                            zero.currentTime=0;
+                            zero.play();
+                            break;
+                        case('s'):
+                            stopAudio();
+                        case('S'):
+                            stopAudio();
+                    }
+                });
+                function stopAudio(){
+                    var sounds=document.getElementsByTagName('audio');
+                    for(i=0;i<sounds.length;i++){
+                        sounds[i].pause();
+                    }
+                }
+                function GI(){
+                    window.open("https://opradre.com/girls-like-you-mp3-download-by-maroon-5/");
+            
+                }
+                function A(){
+                    window.open("https://genius.com/Masked-wolf-astronaut-in-the-ocean-ezhel-remix-lyrics");
+            
+                }
+                function EnjoyMusic(){
+                    alert("Hope You enjoy the song!");
+                }
+            
+            </script>
+        </body>
+
+    </html>
