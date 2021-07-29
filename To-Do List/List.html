@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            color:black;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>To Do-List</h2>
+    <input type="text" id="box" placeholder= "Type here to add task">
+    <input type="button" value="Add Item" onclick="addItem();">
+    <br>
+    <div id="list"></div>
+<script>
+        if (localStorage.storedList){
+            loadList();
+        }
+function addItem(){
+    var newItem = document.createElement("div");
+    var taskToAdd = document.getElementById("box").value;
+    newItem.innerHTML=taskToAdd;
+    newItem.onclick=removeItem;
+    document.getElementById("list").appendChild(newItem);
+    saveList();
+}
+function removeItem(){
+    document.getElementById("list").removeChild(this);
+    saveList();
+}
+function saveList(){
+    localStorage.storedList=document.getElementById("list").innerHTML;
+}
+function loadList(){
+    newItem.onclick=removeItem;
+    document.getElementById("list").innerHTML=localStorage.storedList;
+    for (var i = 0; i < list.children.length; i++){
+        list.children[i].onclick=removeItem;
+    }
+}
+
+</script>
+</body>
+</html>
+    

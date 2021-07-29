@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap" rel="stylesheet">
+        <style>
+            h2{
+                font-size:40px;
+                background-color: black;
+                color: white;
+
+            }
+            img{
+                width:50%;
+                margin:0 auto;
+                text-align: center;
+                transition: 0.2s;
+            }
+            img:active{
+                transform:scale(1.2);
+            }
+            body{
+                background-color: lightblue;
+                text-align: center;
+                font-family: 'Orbitron', sans-serif;
+
+            
+
+            }
+            h4{
+                color: black;
+            }
+
+        </style>
+    </head>
+    <body>
+        <main class="gameplay">
+            <h2 class= "title"> "Make America Great Again!" Click to support Trumpy!!</h2>
+            <img src="https://www.icegif.com/wp-content/uploads/trump-dancing-icegif-4.gif" onclick="addMoney(amountPerClick)" width=400>
+            <h4>Current Money: <span id= "moneyValue">0</span></h4>
+                <h4 id="progressText"></h4>
+            <div class="upgradeArea">
+                <div class="trumpPrice">
+                    <p>Your trump sells for $<span id="currentTrumpPrice">2</span>!</span></p>
+                    <button onclick="increaseSellingPrice();">Click to Increase Price! <span id="priceSpan">($0)</span></button>
+                </div>
+            </div>
+        </main>
+        <script>
+            //HTML Elements
+            const currentMoney=document.getElementById('moneyValue');
+            const currentTrumpPrice= document.getElementById('currentTrumpPrice');
+            //HTML Buttons
+            const priceSpan= document.getElementById('priceSpan');
+            //Game Variable
+            var money =0;
+            var moneyOverLifetime=0;
+            var amountPerClick=2;
+            var costToUpgrade;
+            //Functions
+            function addMoney(amountToAdd){
+                money+=amountToAdd;
+                moneyOverLifetime+=amountToAdd;
+                currentMoney.innerHTML=money;
+                updateProgressMessage();
+            }
+            function updateProgressMessage(){
+                if (moneyOverLifetime >=50000)
+                    progressText.innerHTML=messageList[4];
+                else if (moneyOverLifetime >=3000)
+                    progressText.innerHTML=messageList[3];
+                else if (moneyOverLifetime >=2000)
+                    progressText.innerHTML=messageList[2];
+                else if (moneyOverLifetime >=1000)
+                    progressText.innerHTML=messageList[1];
+                else if (moneyOverLifetime >=100)
+                    progressText.innerHTML=messageList[0];
+            }
+            function deductMoney(amountToDeduct){
+                money-= amountToDeduct;
+                currentMoney.innerHTML=money;
+            }
+            function increaseSellingPrice(){
+                costToUpgrade=50* parseInt(currentTrumpPrice.innerHTML);
+                //parseInt= Making the string an integer
+
+                if (money >= costToUpgrade){
+                    deductMoney(costToUpgrade);
+                    amountPerClick +=2;
+                    currentTrumpPrice.innerHTML=amountPerClick;
+                }
+                costToUpgrade = 50* parseInt(currentTrumpPrice.innerHTML);
+                priceSpan.innerHTML="($"+ costToUpgrade +")";
+            }
+            const progressText= document.getElementById("progressText");
+            const messageList=["You're selling trumps from the sewers in China. We all gotta start somewhere, right?",
+                               "Hey look, your trump stand is starting to get more African customers! Keep this up and you'll have the whitehouse someday!",
+                               "CONGRATS! You just rented your first model whitehouse!",
+                               "Wow, this place sure is starting to get busy. Keep it up and you might have to get a bigger whitehouse to seat all these customers!",
+                               "A 2nd Whitehouse?? Great job, your trump empire is really growing now!"];
+            progressText.innerHTML=messageList[0];
+
+        </script>
+    </body>
+   
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <style>
+        
+        form{
+            text-align: center;
+        }
+        label{
+            position: relative;
+            right: 22%;
+        }
+        img{
+            width: 50%;
+            position: relative;
+            left:20%;
+        }
+        input{
+            width: 500px;
+            text-align: center;
+        }
+        p{
+            position: absolute;
+            bottom:0;
+            margin: 10px;
+            border-radius: 20px;
+            height:25px;
+
+        
+        }
+        body{
+            font-family: 'Indie Flower', cursive;
+
+        }
+        
+        small{
+            font-size:13px;
+            opacity:0;
+        }
+        .show-description{
+            height:auto;
+        }
+        button{
+            
+            font-family: 'Bebas Neue', cursive;
+            width: 100px;
+        }
+        button:hover{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <img src="Glorious.jpg" alt="Glorious O Model Wire Mouse!">
+    <form action="mailto:captainbosco8888@gmail.com" method="post" enctype='text/plain'>
+        <label>Name:</label><br>
+        <input type="text" name="name" placeholder="Full Name" required minlength="3"><br>
+        <label>Email:</label><br>
+        <input type="text" name="mail" placeholder="Email Address" required><br>
+        <label>Comment:</label><br>
+        <input type="text" name="comment" size="100" placeholder="Please leave your comments/feedback" required minlength="5"><br><br>
+        <button type="submit" value="Send">Submit</button>
+        <button type="reset" value="Reset">Reset</button>
+    </form>
+    <script>
+        function start(){
+            //get the div HTML object
+            var divisions = document.getElementsByTagName('div');
+            //loop through all the div objects
+            for (var i=0; i < divisions.length; i++){
+                //trigger the show-description class
+                divisions[i].addEventListener('click', function(event){
+                    this.classList.toggle('show-description');
+                });
+            }
+        }
+    </script>
+</body>
