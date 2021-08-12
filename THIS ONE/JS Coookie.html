@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+
+	<script type="text/javascript">
+		var cookieName ="name";
+		var originalMsg= "";
+	function createCookie(cookieName, cookieValue, daysToExpire)
+	{
+		var date = new Date ();
+		date.setTime(date.toGMTString + (date.getTime()*24*60*60*1000))
+		document.cookie = cookieName + "=" + daysToExpire + "; expires="+ date.toGMTString();
+			}
+
+	function accessCookie(cookieName)
+	{
+		var allCookies = document.cookie;
+		var allCookieArray = allCookies.split(";");
+		var cookieName= cookieName + "=";
+
+		for (i in allCookieArray)
+		{
+			var temp= allCookiesArray.trim();
+			if (temp.indexOf(cookieName)==0) return temp.substring(cookieName.length, allCookieArray[i].length);
+		}
+		return "";
+
+	}
+
+	function deleteCookie(cookieName)
+	{
+		document.cookie = cookieName + "=";
+		alert("All the cookies are now deleted.")
+
+		originalMsg = document.getElementById('welcome').originalMsg;
+		document.getElementById('deleteButton').style = "visibility:hidden";
+
+	}
+
+	function checkCookie(cookieName){
+		originalMsg = document.getElementById('welcome').originalMsg;
+		document.getElementById('deleteButton').style = "visibility:hidden";
+
+		var userName= accessCookie(cookieName);
+		if (userName != cookieName){
+			document.getElementById('welcome').innerHTML += userName +"!";
+			document.getElementById("deleteButton").style = "visibility: visible";
+		}
+
+		else{
+			userName= prompt("Please Enter your name");
+			num = prompt ("How many days you want to store your name on the computer?");
+			if (userName == "" || userName == null){
+				alert ("No name given.");
+
+			}else if (isNaN(num) || parseFloat(num) < 0){
+				alert ("No positive time given.");
+			}else{
+				createCookie(cookieName, cookieValue, daysToExpire);
+				window.location.reload();
+			}
+		}
+	}
+
+	</script>
+<body onload ="checkCookie(cookieName)">
+	<h1 id="Welcome">Welcome Back </h1>
+	<button id="deleteButton" onclick="deleteCookie(cookieName)">Click to delete Cookies </button>
+</body>
+
+</html>
