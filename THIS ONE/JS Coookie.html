@@ -11,9 +11,9 @@
 	function createCookie(cookieName, cookieValue, daysToExpire)
 	{
 		var date = new Date ();
-		date.setTime(date.toGMTString + (date.getTime()*24*60*60*1000))
-		document.cookie = cookieName + "=" + daysToExpire + "; expires="+ date.toGMTString();
-			}
+		date.setTime(date.toGMTString()+ (date.getTime()*24*60*60*1000));
+		document.cookie = cookieName + "=" + cookieValue + "; expires="+ daysToExpire;
+	}
 
 	function accessCookie(cookieName)
 	{
@@ -23,7 +23,7 @@
 
 		for (i in allCookieArray)
 		{
-			var temp= allCookiesArray.trim();
+			var temp= allCookiesArray[i].trim();
 			if (temp.indexOf(cookieName)==0) return temp.substring(cookieName.length, allCookieArray[i].length);
 		}
 		return "";
@@ -32,20 +32,20 @@
 
 	function deleteCookie(cookieName)
 	{
-		document.cookie = cookieName + "=";
+		document.cookie = cookieName + "=;expires=Thu,01 Jan 2022 00:00:00GMT";
 		alert("All the cookies are now deleted.")
 
-		originalMsg = document.getElementById('welcome').originalMsg;
+		document.getElementById('welcome').innerHTML=originalMsg;
 		document.getElementById('deleteButton').style = "visibility:hidden";
 
 	}
 
 	function checkCookie(cookieName){
-		originalMsg = document.getElementById('welcome').originalMsg;
+		originalMsg = document.getElementById('welcome').innerHTML;
 		document.getElementById('deleteButton').style = "visibility:hidden";
 
 		var userName= accessCookie(cookieName);
-		if (userName != cookieName){
+		if (userName != "name"){
 			document.getElementById('welcome').innerHTML += userName +"!";
 			document.getElementById("deleteButton").style = "visibility: visible";
 		}
@@ -59,15 +59,15 @@
 			}else if (isNaN(num) || parseFloat(num) < 0){
 				alert ("No positive time given.");
 			}else{
-				createCookie(cookieName, cookieValue, daysToExpire);
+				createCookie(cookieName, userName, num);
 				window.location.reload();
 			}
 		}
 	}
 
 	</script>
-<body onload ="checkCookie(cookieName)">
-	<h1 id="Welcome">Welcome Back </h1>
+<body onload="checkCookie(cookieName)">
+	<h1 id="welcome">Welcome Back </h1>
 	<button id="deleteButton" onclick="deleteCookie(cookieName)">Click to delete Cookies </button>
 </body>
 
